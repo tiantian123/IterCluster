@@ -25,7 +25,7 @@
 │   ├── barcode_RC.list                          # reverse complementary barcode list of stLFR.
 │   ├── lane.lst                                 # config for SOAPfilter.
 │   └── lib.list                                 # config for KmerFreq.
-├── IterCluster                                
+├── IterCluster_algorithm                                
 │   ├── README                                   # the Install approach.
 │   ├── LFR_matrix_bulid                         # build the relation matrix.
 │   ├── IterCluster-MCL                          # cluster
