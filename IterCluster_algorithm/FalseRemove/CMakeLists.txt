@@ -1,0 +1,11 @@
+PROJECT(main)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8) 
+ADD_SUBDIRECTORY( src )
+AUX_SOURCE_DIRECTORY(. DIR_SRCS)
+ADD_EXECUTABLE(main ${DIR_SRCS}  )
+add_definitions(-std=c++11)
+include_directories( src )
+TARGET_LINK_LIBRARIES( main Test )
+TARGET_LINK_LIBRARIES(main -lpthread -lz)
+SET(CMAKE_C_COMPILER "/usr/bin/g++")
+

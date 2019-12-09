@@ -1,0 +1,15 @@
+PROJECT(main)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8) 
+ADD_SUBDIRECTORY( src )
+AUX_SOURCE_DIRECTORY(. DIR_SRCS)
+ADD_EXECUTABLE(main ${DIR_SRCS}  )
+add_definitions(-std=c++11)
+include_directories( src ./src/eigen-eigen-b9cd8366d4e8/)
+TARGET_LINK_LIBRARIES( main Test )
+TARGET_LINK_LIBRARIES(main pthread)
+SET(CMAKE_C_COMPILER "/usr/bin/g++")
+
+SET(CMAKE_BUILD_TYPE "Debug")  
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")  
+SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall") 
+
